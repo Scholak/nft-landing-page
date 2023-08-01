@@ -119,13 +119,13 @@ export const Content = styled(motion.div)`
 export const CTA = styled.div`
 	display: flex;
 	align-items: center;
-  cursor: pointer;
+	cursor: pointer;
 
-  img {
-    width: 72px;
-    height: 72px;
-    transform: translateY(8px);
-  }
+	img {
+		width: 72px;
+		height: 72px;
+		transform: translateY(8px);
+	}
 
 	div {
 		font-family: 'Poppins', sans-serif;
@@ -135,9 +135,11 @@ export const CTA = styled.div`
 			font-size: 20px;
 			margin-bottom: 12px;
 		}
+	}
 
-    p:last-child {
-      width: 300px;
-    }
+	@media screen and (min-width: ${({ theme }) => theme.breakPoints.md}) {
+		div p:last-child {
+			width: 300px;
+		}
 	}
 `
