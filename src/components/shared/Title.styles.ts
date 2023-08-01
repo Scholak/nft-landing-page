@@ -23,8 +23,8 @@ export const Title = styled(motion.h3)<TitleProps>`
 		display: ${({ shape }) => (shape ? 'static' : 'none')};
 		content: '';
 		position: absolute;
-		width: 85px;
-		height: 85px;
+		width: 40px;
+		height: 40px;
 		top: 50%;
 		left: 0;
 		transform: translate(-50%, -50%);
@@ -39,9 +39,19 @@ export const Title = styled(motion.h3)<TitleProps>`
 
 	@media screen and (min-width: ${({ theme }) => theme.breakPoints.sm}) {
 		font-size: 32px;
+
+		&:before {
+			width: 60px;
+			height: 60px;
+		}
 	}
 
-	@media screen and (min-width: ${({ theme }) => theme.breakPoints.sm}) {
+	@media screen and (min-width: ${({ theme }) => theme.breakPoints.md}) {
 		font-size: 40px;
+
+		&:before {
+			width: 85px;
+			height: 85px;
+		}
 	}
 `
