@@ -67,6 +67,10 @@ export const BottomSection = styled.div`
 		gap: 30px;
 	}
 
+	& > p {
+		text-align: center;
+	}
+
 	@media screen and (min-width: ${({ theme }) => theme.breakPoints.sm}) {
 		grid-column: 1 / span 2;
 		flex-direction: row;
